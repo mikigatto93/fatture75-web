@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fatture75</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <!--<script src="https://cdn.sheetjs.com/xlsx-0.20.0/package/dist/xlsx.full.min.js"></script>-->
+
+
+</head>
+
+<body>
+
+    <div id="container">
+
+        <form method="post" action="http://localhost:8080/api/quote_data" enctype="multipart/form-data">
+            <input type="file" id="data-file" name="file">
+            <input type="submit" value="submit" id="submit">
+            <input type="button" value="submit-1" id="submit-1">
+        </form>
+
+        <div id="quote-data-container">
+            <p id="quote-header"></p>
+            <ul id="quote-items-list">
+                <template id="prod-item-template">
+                    <li class="prod-list-item">
+                        <div class="prod-item-container">
+                            <dl>
+                                <dt>Larghezza</dt>
+                                <dd class="width"></dd>
+
+                                <dt>Altezza</dt>
+                                <dd class="height"></dd>
+
+                                <dt>Quantita'</dt>
+                                <dd class="quantity"></dd>
+
+                                <dt>Prezzo totale</dt>
+                                <dd class="tot-price"></dd>
+
+                                <dt>Id Prodotto</dt>
+                                <dd class="prod-id"></dd>
+
+                                <dt>Riferimento</dt>
+                                <dd class="reference"></dd>
+                            </dl>
+
+
+                            <input type="checkbox" id="tapparelle-checkbox">
+                            <label for="tapparelle-checkbox">Tapparelle</label>
+
+
+                            <label for="prod-group">Seleziona gruppo</label>
+                            <select id="prod-group">
+                                <option selected value="A">A</option>
+                                <option value="B">B</option>
+                                <option value="C">C</option>
+                                <option value="D">D</option>
+                            </select>
+
+                        </div>
+                    </li>
+                </template>
+
+
+            </ul>
+        </div>
+    </div>
+
+    <script src="js/Main.js"></script>
+    <script src="js/ProductItem.js"></script>
+</body>
+
+</html>
