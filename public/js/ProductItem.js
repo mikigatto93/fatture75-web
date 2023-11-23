@@ -1,8 +1,10 @@
 class ProductItem {
-    constructor(uuid, prodData) {
+    constructor(uuid, prodData, position) {
         this.uuid = uuid;
+        this.position = position;
         this.prodData = prodData;
         this.node = null;
+        this.group = "A";  // default group
     }
 
     setupNode() {
@@ -14,19 +16,17 @@ class ProductItem {
 
         //setup event handlers
         let self = this;
-        let checkbox = this.node.querySelector("#tapparelle-checkbox");
-        checkbox.addEventListener(
+        
+        this.node.querySelector(".prod-group").addEventListener(
             "change", function () {
-                self.handleTapparelleCheckboxChange.call(self, checkbox.checked);
+                self.handleGroupSelectChange.call(self);
             }
         );
+
     }
 
-    handleTapparelleCheckboxChange(checked) {
-        if (checked) {
-            console.log(this.uuid);
-            this.node.querySelector("#prod-group").value = "B";
-        }
+    handleGroupSelectChange() {
+        //this.group = this.node.querySelector(".prod-group").value = "B";
     }
 
     render(parent) {

@@ -41,6 +41,7 @@ type XmlProductData struct {
 	Price     float32
 	Notes     string
 	Reference string
+	Depth     int //only for casing
 }
 
 type XmlHeaderData struct {
@@ -90,6 +91,7 @@ func parseData(data rawXmlDocumentData) []XmlProductData {
 		//set custom default values
 		width := -1
 		height := -1
+		depth := -1 //only for casing
 		var notes string
 
 		for _, val := range p.DescriptionExtended {
@@ -104,6 +106,9 @@ func parseData(data rawXmlDocumentData) []XmlProductData {
 				width, _ = strconv.Atoi(parsedVal)
 			} else if val.Name == "Note" {
 				notes = val.Value
+			} else if val.Name == "Profondità" {
+				parsedVal := strings.Replace(val.Value, "mm", "", 1)
+				depth, _ = strconv.Atoi(parsedVal)
 			}
 		}
 
@@ -115,6 +120,7 @@ func parseData(data rawXmlDocumentData) []XmlProductData {
 			Quantity:  p.Quantity,
 			Notes:     notes,
 			Reference: p.Reference,
+			Depth:     depth,
 		}
 
 		prodList = append(prodList, prodData)

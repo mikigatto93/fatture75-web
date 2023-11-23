@@ -4,7 +4,7 @@ const quoteDataContainer = document.getElementById("quote-data-container");
 const quoteHeader = document.getElementById("quote-header");
 const quoteItemsList = document.getElementById("quote-items-list");
 
-let QUOTE_DATA = {};
+let QuoteData = new QuoteDataRepo();
 
 
 submitBtn.addEventListener("click", () => {
@@ -38,25 +38,23 @@ function processQuoteData(data) {
   quoteHeader.textContent = data.title;
 
   //format header
-  QUOTE_DATA["header"] = {
-    "commission": data.commission,
-    "title": data.title,
-  };
+  QuoteData.commission = data.commission;
+  QuoteData.title = data.title;
 
   //format products
-  for (prod of data.products) {
-    let uuid = formatProduct(prod);
-    let prodData = QUOTE_DATA[uuid];
-    createProductItem(prodData, uuid);
+  for (let position in data.products) {
+    let prod = data.products[position];
+    let prodData = formatProduct(prod);
+    createProductItem(prodData, position);
   }
 
+  QuoteData.setupCasingSelectors();
 
+  QuoteData.renderAllProducts(quoteItemsList);
 }
 
 function formatProduct(product) {
-  const uuid = crypto.randomUUID();
-
-  QUOTE_DATA[uuid] = {
+  let prodObj = {
     "height": product.Height,
     "width": product.Width,
     "notes": product.Notes,
@@ -66,11 +64,24 @@ function formatProduct(product) {
     "reference": product.Reference,
   };
 
-  return uuid;
+  if (product.Depth > 0) {
+    prodObj["depth"] = parseInt(product.Depth);
+  }
+  
+  return prodObj;
 }
 
-function createProductItem(product, uuid) {
-  let prodElement = new ProductItem(uuid, product);
+function createProductItem(product, position) {
+  let prodElement;
+  const uuid = crypto.randomUUID();
+
+  if ("depth" in product) {
+    prodElement = new CasingProductItem(uuid, product, position);
+    QuoteData.addCasingProduct(prodElement);
+  } else {
+    prodElement = new FixtureProductItem(uuid, product, position);
+    QuoteData.addFixtureProduct(prodElement);
+  }
+  
   prodElement.setupNode();
-  prodElement.render(quoteItemsList);
 }

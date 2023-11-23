@@ -1,238 +1,210 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <Order>
-	<IsProcessable>true</IsProcessable>
-	<Header>
-		<Reseller>
-			<CompanyName>GATTO GROUP S.R.L.</CompanyName>
-			<Address>Via Montagnon 59 B
-35028 Piove Di Sacco PD</Address>
-			<AddressDestination>
-  </AddressDestination>
-			<VatNumber>04966550289</VatNumber>
-			<PhoneMobile/>
-			<Phone>0499714209</Phone>
-			<Fax/>
-			<Email>gattogroupsas@gmail.com</Email>
-		</Reseller>
-		<BrandId>WND</BrandId>
-		<Title>Nuovo preventivo del 17-nov-2023</Title>
-		<Customer>GATTO GROUP SAS</Customer>
-		<OrderNumber/>
-		<OrderDate/>
-		<OrderType>  elite-store</OrderType>
-		<Commission>test</Commission>
-		<Note/>
-		<AntenoreRes>Christopher Mazza - Oscar Pasolini - Filippo Ferri</AntenoreRes>
-	</Header>
-	<Rows>
-		<Row>
-			<Position>1</Position>
-			<Trasmittance>1.30</Trasmittance>
-			<ProductId>WND.FN1.SXR</ProductId>
-			<Description>Misure Foro (esterno telaio alette escluse): 
-Larghezza: 1000mm - Altezza: 1500mm
-Metri quadri: 1,50
-Finestra a 1 anta SX con ribalta
-Larghezza: 1000mm - Altezza: 1500mm
-Profilo: WnD Konfortline
-Telaio: Telaio L Square Plus/Konfortline
-Cerniera: Cerniere Standard da finestra
-Tipo ferramenta: Ferramenta Standard
-Fermavetro: Fermavetro squadrato
-Colore interno: Bianco
-Colore esterno: Bianco
-Maniglia: Maniglia Toulon Argento h 432mm
-Vetro: 4/16/4 ESG
-Canalina vetro: Canalina in alluminio
-Note: test note</Description>
-			<DescriptionExtended>
-				<DescriptionItem Name="Misure Foro (esterno telaio alette escluse)" Value=""/>
-				<DescriptionItem Name="Larghezza" Value="1000mm"/>
-				<DescriptionItem Name="Altezza" Value="1500mm"/>
-				<DescriptionItem Name="Metri quadri" Value="1,50"/>
-				<DescriptionItem Name="Finestra a 1 anta SX con ribalta"/>
-				<DescriptionItem Name="Larghezza" Value="1000mm"/>
-				<DescriptionItem Name="Altezza" Value="1500mm"/>
-				<DescriptionItem Name="Profilo" Value="WnD Konfortline"/>
-				<DescriptionItem Name="Telaio" Value="Telaio L Square Plus/Konfortline"/>
-				<DescriptionItem Name="Cerniera" Value="Cerniere Standard da finestra"/>
-				<DescriptionItem Name="Tipo ferramenta" Value="Ferramenta Standard"/>
-				<DescriptionItem Name="Fermavetro" Value="Fermavetro squadrato"/>
-				<DescriptionItem Name="Colore interno" Value="Bianco"/>
-				<DescriptionItem Name="Colore esterno" Value="Bianco"/>
-				<DescriptionItem Name="Maniglia" Value="Maniglia Toulon Argento"/>
-				<DescriptionItem Name="ManigliaAltezza" Value="432mm"/>
-				<DescriptionItem Name="Vetro" Value="4/16/4 ESG"/>
-				<DescriptionItem Name="Canalina vetro" Value="Canalina in alluminio"/>
-				<DescriptionItem Name="Note" Value="test note"/>
-			</DescriptionExtended>
-			<UnitPrice>277.35</UnitPrice>
-			<QuantityPrice>277.35</QuantityPrice>
-			<UnitListPrice>583.90</UnitListPrice>
-			<QuantityListPrice>583.90</QuantityListPrice>
-			<Quantity>1</Quantity>
-			<Reference>test rif</Reference>
-		</Row>
-		<Row>
-			<Position>2</Position>
-			<Trasmittance>1.30</Trasmittance>
-			<ProductId>WND.FN2.AB.AR</ProductId>
-			<Description>Misure Foro (esterno telaio alette escluse): 
-Larghezza: 1000mm - Altezza: 1500mm
-Metri quadri: 1,50
-Finestra a 2 ante DX con ribalta
-Larghezza: 1000mm - Altezza: 1500mm
-Profilo: WnD Konfortline
-Telaio: Telaio L Square Plus/Konfortline
-Cerniera: Cerniere Standard da finestra
-Tipo ferramenta: Ferramenta Standard
-Fermavetro: Fermavetro squadrato
-Colore interno: Bianco
-Colore esterno: Bianco
-Maniglia: Maniglia Toulon Argento h 432mm
-Vetro: 4/16/4 ESG
-Canalina vetro: Canalina in alluminio</Description>
-			<DescriptionExtended>
-				<DescriptionItem Name="Misure Foro (esterno telaio alette escluse)" Value=""/>
-				<DescriptionItem Name="Larghezza" Value="1000mm"/>
-				<DescriptionItem Name="Altezza" Value="1500mm"/>
-				<DescriptionItem Name="Metri quadri" Value="1,50"/>
-				<DescriptionItem Name="Finestra a 2 ante DX con ribalta"/>
-				<DescriptionItem Name="Larghezza" Value="1000mm"/>
-				<DescriptionItem Name="Altezza" Value="1500mm"/>
-				<DescriptionItem Name="Profilo" Value="WnD Konfortline"/>
-				<DescriptionItem Name="Telaio" Value="Telaio L Square Plus/Konfortline"/>
-				<DescriptionItem Name="Cerniera" Value="Cerniere Standard da finestra"/>
-				<DescriptionItem Name="Tipo ferramenta" Value="Ferramenta Standard"/>
-				<DescriptionItem Name="Fermavetro" Value="Fermavetro squadrato"/>
-				<DescriptionItem Name="Colore interno" Value="Bianco"/>
-				<DescriptionItem Name="Colore esterno" Value="Bianco"/>
-				<DescriptionItem Name="Maniglia" Value="Maniglia Toulon Argento"/>
-				<DescriptionItem Name="ManigliaAltezza" Value="432mm"/>
-				<DescriptionItem Name="Vetro" Value="4/16/4 ESG"/>
-				<DescriptionItem Name="Canalina vetro" Value="Canalina in alluminio"/>
-			</DescriptionExtended>
-			<UnitPrice>376.41</UnitPrice>
-			<QuantityPrice>376.41</QuantityPrice>
-			<UnitListPrice>792.43</UnitListPrice>
-			<QuantityListPrice>792.43</QuantityListPrice>
-			<Quantity>1</Quantity>
-			<Reference/>
-		</Row>
-		<Row>
-			<Position>3</Position>
-			<Trasmittance>1.30</Trasmittance>
-			<ProductId>WND.PFN1.SXR</ProductId>
-			<Description>Misure Foro (esterno telaio alette escluse): 
-Larghezza: 1000mm - Altezza: 2200mm
-Metri quadri: 2,20
-Portabalcone a 1 anta SX con ribalta
-Larghezza: 1000mm - Altezza: 2200mm
-Profilo: WnD Konfortline
-Telaio: Telaio L Square Plus/Konfortline
-Cerniera: Cerniere Standard da finestra
-Tipo ferramenta: Ferramenta Standard
-Fermavetro: Fermavetro squadrato
-Soglia: Soglia ribassata in alluminio
-Colore interno: Bianco
-Colore esterno: Bianco
-Maniglia: Maniglia Toulon Argento h 1075mm
-Vetro: 4ESG/16/4 ESG
-Canalina vetro: Canalina in alluminio</Description>
-			<DescriptionExtended>
-				<DescriptionItem Name="Misure Foro (esterno telaio alette escluse)" Value=""/>
-				<DescriptionItem Name="Larghezza" Value="1000mm"/>
-				<DescriptionItem Name="Altezza" Value="2200mm"/>
-				<DescriptionItem Name="Metri quadri" Value="2,20"/>
-				<DescriptionItem Name="Portabalcone a 1 anta SX con ribalta"/>
-				<DescriptionItem Name="Larghezza" Value="1000mm"/>
-				<DescriptionItem Name="Altezza" Value="2200mm"/>
-				<DescriptionItem Name="Profilo" Value="WnD Konfortline"/>
-				<DescriptionItem Name="Telaio" Value="Telaio L Square Plus/Konfortline"/>
-				<DescriptionItem Name="Cerniera" Value="Cerniere Standard da finestra"/>
-				<DescriptionItem Name="Tipo ferramenta" Value="Ferramenta Standard"/>
-				<DescriptionItem Name="Fermavetro" Value="Fermavetro squadrato"/>
-				<DescriptionItem Name="Soglia" Value="Soglia ribassata in alluminio"/>
-				<DescriptionItem Name="Colore interno" Value="Bianco"/>
-				<DescriptionItem Name="Colore esterno" Value="Bianco"/>
-				<DescriptionItem Name="Maniglia" Value="Maniglia Toulon Argento"/>
-				<DescriptionItem Name="ManigliaAltezza" Value="1075mm"/>
-				<DescriptionItem Name="Vetro" Value="4ESG/16/4 ESG"/>
-				<DescriptionItem Name="Canalina vetro" Value="Canalina in alluminio"/>
-			</DescriptionExtended>
-			<UnitPrice>409.84</UnitPrice>
-			<QuantityPrice>409.84</QuantityPrice>
-			<UnitListPrice>862.82</UnitListPrice>
-			<QuantityListPrice>862.82</QuantityListPrice>
-			<Quantity>1</Quantity>
-			<Reference/>
-		</Row>
-		<Row>
-			<Position>4</Position>
-			<Trasmittance>1.30</Trasmittance>
-			<ProductId>WND.FN2.AB.AR</ProductId>
-			<Description>Misure Foro (esterno telaio alette escluse): 
-Larghezza: 1800mm - Altezza: 1500mm
-Metri quadri: 2,70
-Finestra a 2 ante DX con ribalta
-Larghezza: 1200mm - Altezza: 1500mm
-Profilo: WnD Konfortline
-Telaio: Telaio L Square Plus/Konfortline
-Cerniera: Cerniere Standard da finestra
-Tipo ferramenta: Ferramenta Standard
-Fermavetro: Fermavetro squadrato
-Colore interno: Bianco
-Colore esterno: Bianco
-Maniglia: Maniglia Toulon Argento h 432mm
-Vetro: 4/16/4 ESG
-Canalina vetro: Canalina in alluminio
-Luce aggiuntiva: Fiancoluce destro fisso nel telaio
- - Larghezza: 600mm - Altezza: 1500mm
- - Vetro: 4/16/4 ESG
- - Canalina vetro: Canalina in alluminio
-</Description>
-			<DescriptionExtended>
-				<DescriptionItem Name="Misure Foro (esterno telaio alette escluse)" Value=""/>
-				<DescriptionItem Name="Larghezza" Value="1800mm"/>
-				<DescriptionItem Name="Altezza" Value="1500mm"/>
-				<DescriptionItem Name="Metri quadri" Value="2,70"/>
-				<DescriptionItem Name="Finestra a 2 ante DX con ribalta"/>
-				<DescriptionItem Name="Larghezza" Value="1200mm"/>
-				<DescriptionItem Name="Altezza" Value="1500mm"/>
-				<DescriptionItem Name="Profilo" Value="WnD Konfortline"/>
-				<DescriptionItem Name="Telaio" Value="Telaio L Square Plus/Konfortline"/>
-				<DescriptionItem Name="Cerniera" Value="Cerniere Standard da finestra"/>
-				<DescriptionItem Name="Tipo ferramenta" Value="Ferramenta Standard"/>
-				<DescriptionItem Name="Fermavetro" Value="Fermavetro squadrato"/>
-				<DescriptionItem Name="Colore interno" Value="Bianco"/>
-				<DescriptionItem Name="Colore esterno" Value="Bianco"/>
-				<DescriptionItem Name="Maniglia" Value="Maniglia Toulon Argento"/>
-				<DescriptionItem Name="ManigliaAltezza" Value="432mm"/>
-				<DescriptionItem Name="Vetro" Value="4/16/4 ESG"/>
-				<DescriptionItem Name="Canalina vetro" Value="Canalina in alluminio"/>
-				<DescriptionItem Name="Luce aggiuntiva" Value="Fiancoluce destro fisso nel telaio"/>
-				<DescriptionItem Name=""/>
-				<DescriptionItem Name="Larghezza" Value="600mm"/>
-				<DescriptionItem Name="Altezza" Value="1500mm"/>
-				<DescriptionItem Name=""/>
-				<DescriptionItem Name="Vetro" Value="4/16/4 ESG"/>
-				<DescriptionItem Name=""/>
-				<DescriptionItem Name="Canalina vetro" Value="Canalina in alluminio"/>
-			</DescriptionExtended>
-			<UnitPrice>537.03</UnitPrice>
-			<QuantityPrice>537.03</QuantityPrice>
-			<UnitListPrice>1130.58</UnitListPrice>
-			<QuantityListPrice>1130.58</QuantityListPrice>
-			<Quantity>1</Quantity>
-			<Reference/>
-		</Row>
-	</Rows>
-	<Footer>
-		<OrderNumber/>
-		<OrderDate/>
-		<Customer>GATTO GROUP SAS</Customer>
-		<TotalPrice>1600.62</TotalPrice>
-		<TotalListPrice>3369.74</TotalListPrice>
-		<Note/>
-	</Footer>
+<IsProcessable>true</IsProcessable>
+<Header>
+<Reseller>
+<CompanyName>GATTO GROUP S.R.L.</CompanyName>
+<Address>Via Montagnon 59 B 35028 Piove Di Sacco PD</Address>
+<AddressDestination> </AddressDestination>
+<VatNumber>04966550289</VatNumber>
+<PhoneMobile/>
+<Phone>0499714209</Phone>
+<Fax/>
+<Email>gattogroupsas@gmail.com</Email>
+</Reseller>
+<BrandId>WND</BrandId>
+<Title>Nuovo preventivo del 17-nov-2023</Title>
+<Customer>GATTO GROUP SAS</Customer>
+<OrderNumber/>
+<OrderDate/>
+<OrderType> elite-store</OrderType>
+<Commission>test</Commission>
+<Note/>
+<AntenoreRes>Christopher Mazza - Oscar Pasolini - Filippo Ferri</AntenoreRes>
+</Header>
+<Rows>
+<Row>
+<Position>1</Position>
+<Trasmittance>1.30</Trasmittance>
+<ProductId>WND.FN1.SXR</ProductId>
+<Description>Misure Foro (esterno telaio alette escluse): Larghezza: 1000mm - Altezza: 1500mm Metri quadri: 1,50 Finestra a 1 anta SX con ribalta Larghezza: 1000mm - Altezza: 1500mm Profilo: WnD Konfortline Telaio: Telaio L Square Plus/Konfortline Cerniera: Cerniere Standard da finestra Tipo ferramenta: Ferramenta Standard Fermavetro: Fermavetro squadrato Colore interno: Bianco Colore esterno: Bianco Maniglia: Maniglia Toulon Argento h 432mm Vetro: 4/16/4 ESG Canalina vetro: Canalina in alluminio Note: test note</Description>
+<DescriptionExtended>
+<DescriptionItem Name="Misure Foro (esterno telaio alette escluse)" Value=""/>
+<DescriptionItem Name="Larghezza" Value="1000mm"/>
+<DescriptionItem Name="Altezza" Value="1500mm"/>
+<DescriptionItem Name="Metri quadri" Value="1,50"/>
+<DescriptionItem Name="Finestra a 1 anta SX con ribalta"/>
+<DescriptionItem Name="Larghezza" Value="1000mm"/>
+<DescriptionItem Name="Altezza" Value="1500mm"/>
+<DescriptionItem Name="Profilo" Value="WnD Konfortline"/>
+<DescriptionItem Name="Telaio" Value="Telaio L Square Plus/Konfortline"/>
+<DescriptionItem Name="Cerniera" Value="Cerniere Standard da finestra"/>
+<DescriptionItem Name="Tipo ferramenta" Value="Ferramenta Standard"/>
+<DescriptionItem Name="Fermavetro" Value="Fermavetro squadrato"/>
+<DescriptionItem Name="Colore interno" Value="Bianco"/>
+<DescriptionItem Name="Colore esterno" Value="Bianco"/>
+<DescriptionItem Name="Maniglia" Value="Maniglia Toulon Argento"/>
+<DescriptionItem Name="ManigliaAltezza" Value="432mm"/>
+<DescriptionItem Name="Vetro" Value="4/16/4 ESG"/>
+<DescriptionItem Name="Canalina vetro" Value="Canalina in alluminio"/>
+<DescriptionItem Name="Note" Value="test note"/>
+</DescriptionExtended>
+<UnitPrice>277.35</UnitPrice>
+<QuantityPrice>277.35</QuantityPrice>
+<UnitListPrice>583.90</UnitListPrice>
+<QuantityListPrice>583.90</QuantityListPrice>
+<Quantity>1</Quantity>
+<Reference>test rif</Reference>
+</Row>
+<Row>
+<Position>2</Position>
+<Trasmittance>1.30</Trasmittance>
+<ProductId>WND.FN2.AB.AR</ProductId>
+<Description>Misure Foro (esterno telaio alette escluse): Larghezza: 1000mm - Altezza: 1500mm Metri quadri: 1,50 Finestra a 2 ante DX con ribalta Larghezza: 1000mm - Altezza: 1500mm Profilo: WnD Konfortline Telaio: Telaio L Square Plus/Konfortline Cerniera: Cerniere Standard da finestra Tipo ferramenta: Ferramenta Standard Fermavetro: Fermavetro squadrato Colore interno: Bianco Colore esterno: Bianco Maniglia: Maniglia Toulon Argento h 432mm Vetro: 4/16/4 ESG Canalina vetro: Canalina in alluminio</Description>
+<DescriptionExtended>
+<DescriptionItem Name="Misure Foro (esterno telaio alette escluse)" Value=""/>
+<DescriptionItem Name="Larghezza" Value="1000mm"/>
+<DescriptionItem Name="Altezza" Value="1500mm"/>
+<DescriptionItem Name="Metri quadri" Value="1,50"/>
+<DescriptionItem Name="Finestra a 2 ante DX con ribalta"/>
+<DescriptionItem Name="Larghezza" Value="1000mm"/>
+<DescriptionItem Name="Altezza" Value="1500mm"/>
+<DescriptionItem Name="Profilo" Value="WnD Konfortline"/>
+<DescriptionItem Name="Telaio" Value="Telaio L Square Plus/Konfortline"/>
+<DescriptionItem Name="Cerniera" Value="Cerniere Standard da finestra"/>
+<DescriptionItem Name="Tipo ferramenta" Value="Ferramenta Standard"/>
+<DescriptionItem Name="Fermavetro" Value="Fermavetro squadrato"/>
+<DescriptionItem Name="Colore interno" Value="Bianco"/>
+<DescriptionItem Name="Colore esterno" Value="Bianco"/>
+<DescriptionItem Name="Maniglia" Value="Maniglia Toulon Argento"/>
+<DescriptionItem Name="ManigliaAltezza" Value="432mm"/>
+<DescriptionItem Name="Vetro" Value="4/16/4 ESG"/>
+<DescriptionItem Name="Canalina vetro" Value="Canalina in alluminio"/>
+</DescriptionExtended>
+<UnitPrice>376.41</UnitPrice>
+<QuantityPrice>376.41</QuantityPrice>
+<UnitListPrice>792.43</UnitListPrice>
+<QuantityListPrice>792.43</QuantityListPrice>
+<Quantity>1</Quantity>
+<Reference/>
+</Row>
+<Row>
+<Position>3</Position>
+<Trasmittance>1.30</Trasmittance>
+<ProductId>WND.PFN1.SXR</ProductId>
+<Description>Misure Foro (esterno telaio alette escluse): Larghezza: 1000mm - Altezza: 2200mm Metri quadri: 2,20 Portabalcone a 1 anta SX con ribalta Larghezza: 1000mm - Altezza: 2200mm Profilo: WnD Konfortline Telaio: Telaio L Square Plus/Konfortline Cerniera: Cerniere Standard da finestra Tipo ferramenta: Ferramenta Standard Fermavetro: Fermavetro squadrato Soglia: Soglia ribassata in alluminio Colore interno: Bianco Colore esterno: Bianco Maniglia: Maniglia Toulon Argento h 1075mm Vetro: 4ESG/16/4 ESG Canalina vetro: Canalina in alluminio</Description>
+<DescriptionExtended>
+<DescriptionItem Name="Misure Foro (esterno telaio alette escluse)" Value=""/>
+<DescriptionItem Name="Larghezza" Value="1000mm"/>
+<DescriptionItem Name="Altezza" Value="2200mm"/>
+<DescriptionItem Name="Metri quadri" Value="2,20"/>
+<DescriptionItem Name="Portabalcone a 1 anta SX con ribalta"/>
+<DescriptionItem Name="Larghezza" Value="1000mm"/>
+<DescriptionItem Name="Altezza" Value="2200mm"/>
+<DescriptionItem Name="Profilo" Value="WnD Konfortline"/>
+<DescriptionItem Name="Telaio" Value="Telaio L Square Plus/Konfortline"/>
+<DescriptionItem Name="Cerniera" Value="Cerniere Standard da finestra"/>
+<DescriptionItem Name="Tipo ferramenta" Value="Ferramenta Standard"/>
+<DescriptionItem Name="Fermavetro" Value="Fermavetro squadrato"/>
+<DescriptionItem Name="Soglia" Value="Soglia ribassata in alluminio"/>
+<DescriptionItem Name="Colore interno" Value="Bianco"/>
+<DescriptionItem Name="Colore esterno" Value="Bianco"/>
+<DescriptionItem Name="Maniglia" Value="Maniglia Toulon Argento"/>
+<DescriptionItem Name="ManigliaAltezza" Value="1075mm"/>
+<DescriptionItem Name="Vetro" Value="4ESG/16/4 ESG"/>
+<DescriptionItem Name="Canalina vetro" Value="Canalina in alluminio"/>
+</DescriptionExtended>
+<UnitPrice>409.84</UnitPrice>
+<QuantityPrice>409.84</QuantityPrice>
+<UnitListPrice>862.82</UnitListPrice>
+<QuantityListPrice>862.82</QuantityListPrice>
+<Quantity>1</Quantity>
+<Reference/>
+</Row>
+<Row>
+<Position>4</Position>
+<Trasmittance>1.30</Trasmittance>
+<ProductId>WND.FN2.AB.AR</ProductId>
+<Description>Misure Foro (esterno telaio alette escluse): Larghezza: 1800mm - Altezza: 1500mm Metri quadri: 2,70 Finestra a 2 ante DX con ribalta Larghezza: 1200mm - Altezza: 1500mm Profilo: WnD Konfortline Telaio: Telaio L Square Plus/Konfortline Cerniera: Cerniere Standard da finestra Tipo ferramenta: Ferramenta Standard Fermavetro: Fermavetro squadrato Colore interno: Bianco Colore esterno: Bianco Maniglia: Maniglia Toulon Argento h 432mm Vetro: 4/16/4 ESG Canalina vetro: Canalina in alluminio Luce aggiuntiva: Fiancoluce destro fisso nel telaio - Larghezza: 600mm - Altezza: 1500mm - Vetro: 4/16/4 ESG - Canalina vetro: Canalina in alluminio </Description>
+<DescriptionExtended>
+<DescriptionItem Name="Misure Foro (esterno telaio alette escluse)" Value=""/>
+<DescriptionItem Name="Larghezza" Value="1800mm"/>
+<DescriptionItem Name="Altezza" Value="1500mm"/>
+<DescriptionItem Name="Metri quadri" Value="2,70"/>
+<DescriptionItem Name="Finestra a 2 ante DX con ribalta"/>
+<DescriptionItem Name="Larghezza" Value="1200mm"/>
+<DescriptionItem Name="Altezza" Value="1500mm"/>
+<DescriptionItem Name="Profilo" Value="WnD Konfortline"/>
+<DescriptionItem Name="Telaio" Value="Telaio L Square Plus/Konfortline"/>
+<DescriptionItem Name="Cerniera" Value="Cerniere Standard da finestra"/>
+<DescriptionItem Name="Tipo ferramenta" Value="Ferramenta Standard"/>
+<DescriptionItem Name="Fermavetro" Value="Fermavetro squadrato"/>
+<DescriptionItem Name="Colore interno" Value="Bianco"/>
+<DescriptionItem Name="Colore esterno" Value="Bianco"/>
+<DescriptionItem Name="Maniglia" Value="Maniglia Toulon Argento"/>
+<DescriptionItem Name="ManigliaAltezza" Value="432mm"/>
+<DescriptionItem Name="Vetro" Value="4/16/4 ESG"/>
+<DescriptionItem Name="Canalina vetro" Value="Canalina in alluminio"/>
+<DescriptionItem Name="Luce aggiuntiva" Value="Fiancoluce destro fisso nel telaio"/>
+<DescriptionItem Name=""/>
+<DescriptionItem Name="Larghezza" Value="600mm"/>
+<DescriptionItem Name="Altezza" Value="1500mm"/>
+<DescriptionItem Name=""/>
+<DescriptionItem Name="Vetro" Value="4/16/4 ESG"/>
+<DescriptionItem Name=""/>
+<DescriptionItem Name="Canalina vetro" Value="Canalina in alluminio"/>
+</DescriptionExtended>
+<UnitPrice>537.03</UnitPrice>
+<QuantityPrice>537.03</QuantityPrice>
+<UnitListPrice>1130.58</UnitListPrice>
+<QuantityListPrice>1130.58</QuantityListPrice>
+<Quantity>1</Quantity>
+<Reference/>
+</Row>
+<Row>
+<Position>5</Position>
+<ProductId>WND.CAS.M1</ProductId>
+<Description>Cassonetti da restauro Larghezza: 1200mm - Altezza: 400mm Metri quadri: 0,48 Profondità: 80mm Colore: Bianco</Description>
+<DescriptionExtended>
+<DescriptionItem Name="Cassonetti da restauro"/>
+<DescriptionItem Name="Larghezza" Value="1200mm"/>
+<DescriptionItem Name="Altezza" Value="400mm"/>
+<DescriptionItem Name="Metri quadri" Value="0,48"/>
+<DescriptionItem Name="Profondità" Value="80mm"/>
+<DescriptionItem Name="Colore" Value="Bianco"/>
+</DescriptionExtended>
+<UnitPrice>79.51</UnitPrice>
+<QuantityPrice>79.51</QuantityPrice>
+<UnitListPrice>167.40</UnitListPrice>
+<QuantityListPrice>167.40</QuantityListPrice>
+<Quantity>1</Quantity>
+<Reference/>
+</Row>
+<Row>
+<Position>6</Position>
+<ProductId>WND.CAS.M1</ProductId>
+<Description>Cassonetti da restauro Larghezza: 1200mm - Altezza: 400mm Metri quadri: 0,48 Profondità: 80mm Colore: Bianco</Description>
+<DescriptionExtended>
+<DescriptionItem Name="Cassonetti da restauro"/>
+<DescriptionItem Name="Larghezza" Value="1200mm"/>
+<DescriptionItem Name="Altezza" Value="400mm"/>
+<DescriptionItem Name="Metri quadri" Value="0,48"/>
+<DescriptionItem Name="Profondità" Value="80mm"/>
+<DescriptionItem Name="Colore" Value="Bianco"/>
+</DescriptionExtended>
+<UnitPrice>79.51</UnitPrice>
+<QuantityPrice>79.51</QuantityPrice>
+<UnitListPrice>167.40</UnitListPrice>
+<QuantityListPrice>167.40</QuantityListPrice>
+<Quantity>1</Quantity>
+<Reference/>
+</Row>
+</Rows>
+<Footer>
+<OrderNumber/>
+<OrderDate/>
+<Customer>GATTO GROUP SAS</Customer>
+<TotalPrice>1680.14</TotalPrice>
+<TotalListPrice>3537.14</TotalListPrice>
+<Note/>
+</Footer>
 </Order>
