@@ -3,6 +3,7 @@ const submitBtn = document.getElementById("submit-1");
 const quoteDataContainer = document.getElementById("quote-data-container");
 const quoteHeader = document.getElementById("quote-header");
 const quoteItemsList = document.getElementById("quote-items-list");
+const sendDataBtn = document.getElementById("send-data-btn");
 
 let QuoteData = new QuoteDataRepo();
 

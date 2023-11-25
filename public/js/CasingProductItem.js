@@ -9,5 +9,4 @@ class CasingProductItem extends ProductItem {
         
         this.node.querySelector(".casing-selector").style.display = "none";
     }
-    
 }

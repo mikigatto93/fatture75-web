@@ -18,8 +18,25 @@ class QuoteDataRepo {
     }
 
     setupCasingSelectors() {
+        let self = this;
         for(let fixture of this.fixtureList) {
             fixture.setupCasingSelector(this.casingList, this.productsCollection);
+
+            fixture.on("casingselectionchange", function(event) {
+                self.handleCasingSelectionChange.call(
+                    self, fixture, event.casing_uuid
+                );
+            });
+        }
+    }
+
+    handleCasingSelectionChange(triggeringObj, uuid) {
+        for(let fixture of this.fixtureList) {
+            if (triggeringObj != fixture) {
+                //test if it's not the same instance to exclude it
+                //and only change the options of the others
+                fixture.toggleCasingOptionByValue(uuid);
+            }
         }
     }
 
@@ -27,5 +44,14 @@ class QuoteDataRepo {
         for (const [uuid, productItem] of Object.entries(this.productsCollection)) {
             productItem.render(parent);
         }
+    }
+
+    toJson() {
+        let jsonObj = {};
+        for (const [uuid, productItem] of Object.entries(this.productsCollection)) {
+            jsonObj[uuid] = productItem.toJson();
+        }
+        //console.log(jsonObj);
+        return jsonObj;
     }
 }

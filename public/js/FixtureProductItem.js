@@ -48,15 +48,48 @@ class FixtureProductItem extends ProductItem {
             option.textContent = `Posizione ${casing.position}`;
             casingSelector.appendChild(option);
         }
-
     }
 
+    toggleCasingOptionByValue(value) {
+        let option = this.node.querySelector(
+            `option[value=${CSS.escape(value)}]`
+        );
+        option.disabled = !option.disabled;
+    }
+    
+
     handleCasingSelection(productsCollection, selectedValue) {
+        let event = {name: "casingselectionchange"};
+
+
         if(selectedValue != "") {
+
             this.casing = productsCollection[selectedValue];
+            event.casing_uuid = this.casing.uuid;
+            // send an event to notify all select elements
+            // and delete the entry selected
+            
+            this.dispatch(event);
+        
         } else {
-            console.log("no cass");
-            this.casing = null;
+            if (this.casing != null) {
+                event.casing_uuid = this.casing.uuid;
+                this.casing = null;
+                this.dispatch(event);
+            }
         }
+    }
+
+    toJson() {
+        let jsonObj = super.toJson();
+
+        jsonObj["has_roller_shutter"] = this.hasRollerShutter;
+        
+        if (this.casing != null)
+            jsonObj["casing"] = this.casing.uuid;
+        else
+            jsonObj["casing"] = "0";
+
+        return jsonObj;
     }
 }
