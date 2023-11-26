@@ -52,7 +52,7 @@ class ProductItem {
     toJson() {
         return {
             "product_data": this.prodData,
-            "position": this.position,
+            "position": parseInt(this.position),
             "group": this.group,
         }
     }

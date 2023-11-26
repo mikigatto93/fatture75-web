@@ -119,4 +119,8 @@ func handleQuoteDataRequest(w http.ResponseWriter, r *http.Request) {
 	}
 }
 
+func handleFillSpredsheetRequest(w http.ResponseWriter, r *http.Request) {
+
+}
+
 /*https://stackoverflow.com/questions/24116147/how-to-download-file-in-browser-from-go-server*/

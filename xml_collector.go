@@ -78,11 +78,11 @@ func (c *XmlCollector) LoadData() error {
 		Commission: xmlData.Header.Commission,
 	}
 
-	c.ProductData = parseData(xmlData)
+	c.ProductData = parseXmlData(xmlData)
 	return nil
 }
 
-func parseData(data rawXmlDocumentData) []XmlProductData {
+func parseXmlData(data rawXmlDocumentData) []XmlProductData {
 
 	prodList := make([]XmlProductData, 0)
 
