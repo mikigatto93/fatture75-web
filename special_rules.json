@@ -1,0 +1,40 @@
+{
+    
+    "conditional_substitution_rules": [
+        {
+            "sheet": "SERRAMENTI",
+            "cell": "$I$",
+            "rule":[
+                "PorteBlindate->Porte Blindate"
+            ]
+        },
+
+        {
+            "sheet": "SERRAMENTI",
+            "cell": "$AN$",
+            "rule":[
+                "SerrTapp->Serramento con tapparella"
+            ]
+        }
+    ],
+    
+    "substitute_rule": [
+        {
+            "sheet": "CHECK1",
+            "cell": "$B$22",
+            "rule": "Rilievo misure esecutive presso il cantiere"
+        },
+
+        {
+            "sheet": "CHECK1",
+            "cell": "$B$23",
+            "rule": "Rilievo misure esecutive presso il cantiere"
+        },
+
+        {
+            "sheet": "CHECK1",
+            "cell": "$B$35",
+            "rule": "Spese professionali: visto di conformità - asseverazione tecnica con computo metrico"
+        }
+    ]
+}

@@ -1,6 +1,6 @@
 class CasingProductItem extends ProductItem {
-    constructor(uuid, prodData, position) {
-        super(uuid, prodData, position);
+    constructor(uuid, prodData) {
+        super(uuid, prodData);
         this.depth = prodData.depth;
     }
 
@@ -9,4 +9,6 @@ class CasingProductItem extends ProductItem {
         
         this.node.querySelector(".casing-selector").style.display = "none";
     }
+
+    
 }

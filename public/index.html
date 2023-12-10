@@ -19,8 +19,7 @@
 
         <form method="post" action="http://localhost:8080/api/quote_data" enctype="multipart/form-data">
             <input type="file" id="data-file" name="file">
-            <input type="submit" value="submit" id="submit">
-            <input type="button" value="submit-1" id="submit-1">
+            <input type="button" value="Analizza preventivo" id="submit-1">
         </form>
 
         <div id="quote-data-container">
@@ -47,6 +46,9 @@
 
                                 <dt>Riferimento</dt>
                                 <dd class="reference"></dd>
+
+                                <dt>Posizione</dt>
+                                <dd class="position"></dd>
                             </dl>
 
 
@@ -76,6 +78,7 @@
         </div>
 
         <button id="send-data-btn">Invia dati</button>
+        <input type="text" id="excel-file-name">
 
     </div>
 

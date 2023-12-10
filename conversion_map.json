@@ -1,0 +1,55 @@
+{
+    "WND.FN1.SXR": {
+        "Description": ["PVC finestra a 1 anta, a battente"],
+        "TypeWithoutShutters": "Serramenti",
+        "TypeWithShutters": "SerrTapp"
+    },
+
+    "WND.FN1.DXR": {
+        "Description": ["PVC finestra a 1 anta, a battente"],
+        "TypeWithoutShutters": "Serramenti",
+        "TypeWithShutters": "SerrTapp"
+    },
+
+    "WND.FN2.AR.AB": {
+        "Description": ["PVC finestra a 2 ante, a battente"],
+        "TypeWithoutShutters": "Serramenti",
+        "TypeWithShutters": "SerrTapp"
+    },
+
+    "WND.FN2.AB.AR": {
+        "Description": ["PVC finestra a 2 ante, a battente"],
+        "TypeWithoutShutters": "Serramenti",
+        "TypeWithShutters": "SerrTapp"
+    },
+
+    "WND.PFN1.DXR": {
+        "Description": ["PVC portafinestra 1 anta, a battente"],
+        "TypeWithoutShutters": "Serramenti",
+        "TypeWithShutters": "SerrTapp"       
+    },
+
+    "WND.PFN1.SXR": {
+        "Description": ["PVC portafinestra 1 anta, a battente"],
+        "TypeWithoutShutters": "Serramenti",
+        "TypeWithShutters": "SerrTapp"        
+    },
+
+    "WND.PFN2.AB.AR": {
+        "Description": ["PVC portafinestra 2 ante, a battente"],
+        "TypeWithoutShutters": "Serramenti",
+        "TypeWithShutters": "SerrTapp"       
+    },
+
+    "WND.PFN2.AR.AB": {
+        "Description": ["PVC portafinestra 2 ante, a battente"],
+        "TypeWithoutShutters": "Serramenti",
+        "TypeWithShutters": "SerrTapp"        
+    },
+
+    "WND.CAS.M1": {
+        "Description": ["Cassonetto PVC bianco prof. oltre a 110 mm", "Cassonetto PVC bianco prof. fino a 110 mm"],
+        "TypeWithoutShutters": "Cassonetti",
+        "TypeWithShutters": "Cassonetti"   
+    }
+}

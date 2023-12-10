@@ -18,6 +18,7 @@ type rawXmlProductData struct {
 	QuantityListPrice   float32
 	Quantity            int
 	Reference           string
+	Position            int
 	DescriptionExtended []rawXmlDescriptionItem `xml:"DescriptionExtended>DescriptionItem"`
 }
 
@@ -41,6 +42,7 @@ type XmlProductData struct {
 	Price     float32
 	Notes     string
 	Reference string
+	Position  int
 	Depth     int //only for casing
 }
 
@@ -112,18 +114,25 @@ func parseXmlData(data rawXmlDocumentData) []XmlProductData {
 			}
 		}
 
-		prodData := XmlProductData{
-			ProductId: p.ProductId,
-			Height:    height,
-			Width:     width,
-			Price:     p.QuantityListPrice, // total price
-			Quantity:  p.Quantity,
-			Notes:     notes,
-			Reference: p.Reference,
-			Depth:     depth,
-		}
+		if strings.ToUpper(notes) == "NO 75" ||
+			p.ProductId == "WND.CEL.10" {
+			continue
+		} else {
 
-		prodList = append(prodList, prodData)
+			prodData := XmlProductData{
+				ProductId: p.ProductId,
+				Height:    height,
+				Width:     width,
+				Price:     p.QuantityListPrice, // total price
+				Quantity:  p.Quantity,
+				Notes:     notes,
+				Reference: p.Reference,
+				Depth:     depth,
+				Position:  p.Position,
+			}
+
+			prodList = append(prodList, prodData)
+		}
 	}
 
 	return prodList

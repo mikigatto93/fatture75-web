@@ -1,7 +1,7 @@
 class ProductItem {
-    constructor(uuid, prodData, position) {
+    constructor(uuid, prodData) {
         this.uuid = uuid;
-        this.position = position;
+        this.position = prodData.position;
         this.prodData = prodData;
         this.node = null;
         this.group = "A";  // default group
@@ -28,23 +28,33 @@ class ProductItem {
 
         //setup event handlers
         let self = this;
+        let groupChangeSelector = this.node.querySelector(".prod-group");
         
-        this.node.querySelector(".prod-group").addEventListener(
+        groupChangeSelector.addEventListener(
             "change", function () {
-                self.handleGroupSelectChange.call(self);
+                self.setGroup.call(self, groupChangeSelector.value);
             }
         );
 
     }
 
-    handleGroupSelectChange() {
-        //this.group = this.node.querySelector(".prod-group").value = "B";
+    setGroup(group){
+        this.node.querySelector(".prod-group").value = group;
+        this.group = group;
     }
+
 
     render(parent) {
         this.node.querySelector(".width").textContent = this.prodData.width;
         this.node.querySelector(".height").textContent = this.prodData.height;
         this.node.querySelector(".prod-id").textContent = this.prodData.product_id;
+
+        this.node.querySelector(".position").textContent = this.position;
+        this.node.querySelector(".quantity").textContent = this.prodData.quantity;
+        
+        this.node.querySelector(".reference").textContent = this.prodData.reference;
+
+        this.node.querySelector(".tot-price").textContent = this.prodData.tot_price;
 
         parent.appendChild(this.node);
     }

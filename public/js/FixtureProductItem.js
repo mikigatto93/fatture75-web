@@ -1,7 +1,7 @@
 class FixtureProductItem extends ProductItem {
-    constructor(uuid, prodData, position) {
-        super(uuid, prodData, position);
-        this.hasRollerShutter = false;
+    constructor(uuid, prodData) {
+        super(uuid, prodData);
+        this.rollerShutterPrice = 0;
         this.casing = null;
     }
 
@@ -20,11 +20,24 @@ class FixtureProductItem extends ProductItem {
     }
 
     handleRollerShutterCheckboxChange(checked) {
+        let productGroupSelector = this.node.querySelector(".prod-group");
         if (checked) {
-            this.hasRollerShutter = true;
-            console.log(this.uuid);
-            this.node.querySelector(".prod-group").value = "B";
-            this.group = "B";
+
+            //calculate roller shutter price
+            
+            this.rollerShutterPrice = 70*this.prodData.quantity + 
+                (this.prodData.width+20)*(this.prodData.height+250)/(1000*1000)*150*this.prodData.quantity;
+            this.setGroup("B");
+            if (this.casing != null) {
+                this.casing.setGroup("B");
+            }
+
+        } else {
+            this.setGroup("A");
+            if (this.casing != null) {
+                this.casing.setGroup("A");
+            }
+            this.rollerShutterPrice = 0;
         }
     }
 
@@ -68,12 +81,18 @@ class FixtureProductItem extends ProductItem {
             event.casing_uuid = this.casing.uuid;
             // send an event to notify all select elements
             // and delete the entry selected
-            
             this.dispatch(event);
+
+            // change the group of the casing if the fixture
+            // linked has rollers shutters
+            if(this.rollerShutterPrice > 0) {
+                this.casing.setGroup("B");
+            }
         
         } else {
             if (this.casing != null) {
                 event.casing_uuid = this.casing.uuid;
+                this.casing.setGroup("A");
                 this.casing = null;
                 this.dispatch(event);
             }
@@ -83,7 +102,7 @@ class FixtureProductItem extends ProductItem {
     toJson() {
         let jsonObj = super.toJson();
 
-        jsonObj["has_roller_shutter"] = this.hasRollerShutter;
+        jsonObj["roller_shutter_price"] = this.rollerShutterPrice;
         
         if (this.casing != null)
             jsonObj["casing"] = this.casing.uuid;

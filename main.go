@@ -16,6 +16,7 @@ var routerFunctions = make(map[string]RequestHandler)
 
 func init() {
 	routerFunctions["quote_data"] = handleQuoteDataRequest
+	routerFunctions["fill_spreadsheet"] = handleFillSpredsheetRequest
 }
 
 func main() {
@@ -120,6 +121,26 @@ func handleQuoteDataRequest(w http.ResponseWriter, r *http.Request) {
 }
 
 func handleFillSpredsheetRequest(w http.ResponseWriter, r *http.Request) {
+
+	collector := NewJsonCollector()
+
+	err := collector.LoadData(r.Body)
+
+	if err != nil {
+		fmt.Print(err)
+	}
+	fmt.Println(collector.Products)
+	fmt.Println(collector.ExcelFileName)
+
+	writer, err := NewExcelWriter("model.xlsm", "conversion_map.json")
+	if err != nil {
+		fmt.Print(err)
+	}
+	err = writer.InsertProducts(collector, collector.ExcelFileName)
+	if err != nil {
+		fmt.Print(err)
+	}
+	fmt.Println("done")
 
 }
 

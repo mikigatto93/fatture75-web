@@ -2,7 +2,7 @@ module fatture75-server
 
 go 1.20
 
-require github.com/xuri/excelize/v2 v2.8.0
+require github.com/xuri/excelize/v2 v2.7.1
 
 require (
 	github.com/fattureincloud/fattureincloud-go-sdk/v2 v2.0.8

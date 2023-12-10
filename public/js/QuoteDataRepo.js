@@ -30,12 +30,14 @@ class QuoteDataRepo {
         }
     }
 
-    handleCasingSelectionChange(triggeringObj, uuid) {
+    handleCasingSelectionChange(triggeringObj, casingUuid) {
         for(let fixture of this.fixtureList) {
             if (triggeringObj != fixture) {
                 //test if it's not the same instance to exclude it
                 //and only change the options of the others
-                fixture.toggleCasingOptionByValue(uuid);
+                fixture.toggleCasingOptionByValue(casingUuid);
+                let casing = this.productsCollection[casingUuid];
+                
             }
         }
     }

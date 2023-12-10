@@ -83,4 +83,6 @@ const (
 
 	OptionFamilyRow int = 6
 	OptionNameRow   int = 5
+
+	RollerShuttersHeader string = "BK"
 )

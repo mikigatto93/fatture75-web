@@ -5,7 +5,6 @@ import (
 	"fmt"
 	"math"
 	"os"
-	"strconv"
 
 	"github.com/xuri/excelize/v2"
 )
@@ -15,9 +14,10 @@ func approximatePrice(price float64, factor float64) float64 {
 }
 
 type ConversionMapItem struct {
-	Description []string
-	Type        string
-	Group       FixtureGroup
+	Description         []string
+	TypeWithShutters    string
+	TypeWithoutShutters string
+	Group               FixtureGroup
 }
 
 type ExcelWriter struct {
@@ -63,7 +63,7 @@ func (w *ExcelWriter) fillConversionMap(conversionMapFilePath string) error {
 	return nil
 }
 
-func (w *ExcelWriter) InsertProducts(collector *XmlCollector, newFileName string) error {
+func (w *ExcelWriter) InsertProducts(collector *JsonCollector, newFileName string) error {
 
 	file, err := excelize.OpenFile(w.modelFilePath)
 	if err != nil {
@@ -77,50 +77,59 @@ func (w *ExcelWriter) InsertProducts(collector *XmlCollector, newFileName string
 		}
 	}()
 
-	rowCounter := 0
-	for _, p := range collector.ProductData {
+	for _, p := range collector.Products {
 
 		prodData, ok := w.conversionMap[p.ProductId]
+
 		if ok {
-			headers := FixtureHeadersMap[prodData.Group]
 
-			w, err := strconv.Atoi(p.Width)
-			if err != nil {
-				fmt.Println(err)
-				continue
-			}
-
-			h, err := strconv.Atoi(p.Height)
-			if err != nil {
-				fmt.Println(err)
-				continue
-			}
+			headers := FixtureHeadersMap[p.Group]
 
 			// quantity
-			file.SetCellInt(SerramentiSheet, cell(MinFixtureRow+rowCounter, headers.QuantityCol), p.Quantity)
+			file.SetCellInt(SerramentiSheet, cell(MinFixtureRow+p.Position-1, headers.QuantityCol), p.Quantity)
 
 			// width
-			file.SetCellInt(SerramentiSheet, cell(MinFixtureRow+rowCounter, headers.WidthCol), w)
+			file.SetCellInt(SerramentiSheet, cell(MinFixtureRow+p.Position-1, headers.WidthCol), p.Width)
 
 			//height
-			file.SetCellInt(SerramentiSheet, cell(MinFixtureRow+rowCounter, headers.HeightCol), h)
+			file.SetCellInt(SerramentiSheet, cell(MinFixtureRow+p.Position-1, headers.HeightCol), p.Height)
 
 			//type
-			file.SetCellStr(SerramentiSheet, cell(MinFixtureRow+rowCounter, headers.TypeCol), prodData.Type)
+			var prodType string
+			if p.RollerShutterPrice > 0 {
+				prodType = prodData.TypeWithShutters
+
+				//shutters type
+				file.SetCellStr(SerramentiSheet, cell(MinFixtureRow+p.Position-1, RollerShuttersHeader), "Alluminio coibentato - stecche da 55 mm")
+
+			} else {
+				prodType = prodData.TypeWithoutShutters
+			}
+
+			file.SetCellStr(SerramentiSheet, cell(MinFixtureRow+p.Position-1, headers.TypeCol), prodType)
 
 			//desc
-			file.SetCellStr(SerramentiSheet, cell(MinFixtureRow+rowCounter, headers.DescriptionCol), prodData.Description[0])
+			if p.Depth > 0 { // it's a casing
+
+				if p.Depth > 110 {
+					file.SetCellStr(SerramentiSheet, cell(MinFixtureRow+p.Position-1, headers.DescriptionCol), prodData.Description[0])
+				} else {
+					file.SetCellStr(SerramentiSheet, cell(MinFixtureRow+p.Position-1, headers.DescriptionCol), prodData.Description[1])
+				}
+
+			} else {
+				file.SetCellStr(SerramentiSheet, cell(MinFixtureRow+p.Position-1, headers.DescriptionCol), prodData.Description[0])
+			}
 
 			//price
-			approxPrice := approximatePrice(float64(p.Price), 50)
-			file.SetCellFloat(SerramentiSheet, cell(MinFixtureRow+rowCounter, headers.PriceCol), approxPrice, 2, 32)
+			finalPrice := p.TotalPrice + p.RollerShutterPrice
+			approxPrice := approximatePrice(float64(finalPrice), 50)
+			file.SetCellFloat(SerramentiSheet, cell(MinFixtureRow+p.Position-1, headers.PriceCol), approxPrice, 2, 32)
 
-			rowCounter++
+			fmt.Println(prodData)
 
 		} else {
-			fmt.Printf("Unknown ProductID: %s skipped line %d\n", p.ProductId, rowCounter)
-
-			rowCounter++
+			fmt.Printf("Unknown ProductID: %s skipped line %d\n", p.ProductId, p.Position)
 		}
 
 	}

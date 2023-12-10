@@ -4,6 +4,7 @@ const quoteDataContainer = document.getElementById("quote-data-container");
 const quoteHeader = document.getElementById("quote-header");
 const quoteItemsList = document.getElementById("quote-items-list");
 const sendDataBtn = document.getElementById("send-data-btn");
+const excelFileNameTextbox = document.getElementById("excel-file-name");
 
 let QuoteData = new QuoteDataRepo();
 
@@ -20,6 +21,24 @@ submitBtn.addEventListener("click", () => {
 
 });
 
+sendDataBtn.addEventListener("click", function() {
+  let jsonQuoteData = QuoteData.toJson()
+  
+  let jsonRequestBody = {};
+  
+  jsonRequestBody["products"] = jsonQuoteData;
+  console.log(jsonRequestBody)
+  
+  jsonRequestBody["excel_file_name"] = excelFileNameTextbox.value;
+
+  let promise = makeFillSpreadSheetRequest(JSON.stringify(jsonRequestBody));
+
+  promise.then(
+    (data) => { console.log(data); }
+  );
+  
+});
+
 
 async function makeProcessQuoteRequest(formData) {
   let response = await fetch(
@@ -33,6 +52,18 @@ async function makeProcessQuoteRequest(formData) {
   return await response.json();
 }
 
+async function makeFillSpreadSheetRequest(jsonData) {
+  let response = await fetch(
+    "http://localhost:8888/api/fill_spreadsheet",
+    {
+      method: "POST",
+      body: jsonData,
+    }
+  );
+
+  return response;
+}
+
 
 function processQuoteData(data) {
   console.log(data);
@@ -43,10 +74,10 @@ function processQuoteData(data) {
   QuoteData.title = data.title;
 
   //format products
-  for (let position in data.products) {
-    let prod = data.products[position];
+  for (let i in data.products) {
+    let prod = data.products[i];
     let prodData = formatProduct(prod);
-    createProductItem(prodData, position);
+    createProductItem(prodData);
   }
 
   QuoteData.setupCasingSelectors();
@@ -63,6 +94,7 @@ function formatProduct(product) {
     "product_id": product.ProductId,
     "quantity": product.Quantity,
     "reference": product.Reference,
+    "position": product.Position
   };
 
   if (product.Depth > 0) {
@@ -72,15 +104,15 @@ function formatProduct(product) {
   return prodObj;
 }
 
-function createProductItem(product, position) {
+function createProductItem(product) {
   let prodElement;
   const uuid = crypto.randomUUID();
 
   if ("depth" in product) {
-    prodElement = new CasingProductItem(uuid, product, position);
+    prodElement = new CasingProductItem(uuid, product);
     QuoteData.addCasingProduct(prodElement);
   } else {
-    prodElement = new FixtureProductItem(uuid, product, position);
+    prodElement = new FixtureProductItem(uuid, product);
     QuoteData.addFixtureProduct(prodElement);
   }
   
